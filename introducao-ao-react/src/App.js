@@ -4,6 +4,10 @@ function Text1() {
   return "Hello World";
 }
 
+function Text2() {
+  return "Hello World".toLowerCase();
+}
+
 function TextDate() {
   var today = new Date();
   var mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -20,7 +24,8 @@ function TextDate() {
 function App(){
   return (
     <div>
-    <Text1 /> <TextDate/>
+    <Text1 /> <TextDate/> <br/>
+    <Text2 /> <TextDate/> <br/>
     </div>
   );
 }
