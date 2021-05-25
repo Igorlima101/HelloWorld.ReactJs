@@ -28,6 +28,10 @@ function Text7() {
   return "Hello World".split("").reverse().join();
 }
 
+function Text8() {
+  return "Hello World".split("").join();
+}
+
 function TextDate() {
   var today = new Date();
   var mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -51,6 +55,7 @@ function App(){
     <Text5 /> <TextDate/> <br/>
     <Text6 /> <TextDate/> <br/>
     <Text7 /> <TextDate/> <br/>
+    <Text8 /> <TextDate/> <br/>
     </div>
   );
 }
