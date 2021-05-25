@@ -32,6 +32,18 @@ function Text8() {
   return "Hello World".split("").join();
 }
 
+function Welcome() {
+  return <First name="Hello" lastname="World" />;
+}
+
+function First(props) {
+  return (
+    <h1>
+      {props.name} {props.lastname}
+    </h1>
+  );
+}
+
 function TextDate() {
   var today = new Date();
   var mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -56,6 +68,7 @@ function App(){
     <Text6 /> <TextDate/> <br/>
     <Text7 /> <TextDate/> <br/>
     <Text8 /> <TextDate/> <br/>
+    <Welcome /> <TextDate/> <br/>
     </div>
   );
 }
