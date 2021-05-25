@@ -44,6 +44,13 @@ function First(props) {
   );
 }
 
+function Cod(){
+
+  const decoded = (Buffer.from("Hello World").toString('base64'));
+const encoded = (Buffer.from("SGVsbG8gV29ybGQ=", 'base64').toString('utf-8'))
+  return encoded + "  CODIFICADO PARA BASE64: " + decoded ;
+  }
+
 function TextDate() {
   var today = new Date();
   var mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -69,6 +76,7 @@ function App(){
     <Text7 /> <TextDate/> <br/>
     <Text8 /> <TextDate/> <br/>
     <Welcome /> <TextDate/> <br/>
+    <Cod /> <br/> <br/> <TextDate />
     </div>
   );
 }
