@@ -16,6 +16,10 @@ function Text4() {
   return "Hello World".split("").reverse().join("");
 }
 
+function Text5() {
+  return "Hello World".split('').sort(function(){return 0.3-Math.random()}).join('');
+}
+
 function TextDate() {
   var today = new Date();
   var mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -36,6 +40,7 @@ function App(){
     <Text2 /> <TextDate/> <br/>
     <Text3 /> <TextDate/> <br/>
     <Text4 /> <TextDate/> <br/>
+    <Text5 /> <TextDate/> <br/>
     </div>
   );
 }
