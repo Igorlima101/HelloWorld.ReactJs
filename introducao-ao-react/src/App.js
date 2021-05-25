@@ -12,6 +12,10 @@ function Text3() {
   return "Hello World".toUpperCase();
 }
 
+function Text4() {
+  return "Hello World".split("").reverse().join("");
+}
+
 function TextDate() {
   var today = new Date();
   var mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -31,6 +35,7 @@ function App(){
     <Text1 /> <TextDate/> <br/>
     <Text2 /> <TextDate/> <br/>
     <Text3 /> <TextDate/> <br/>
+    <Text4 /> <TextDate/> <br/>
     </div>
   );
 }
