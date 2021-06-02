@@ -1,42 +1,32 @@
-import "./index.js";
-import "./App.css";
-function Text1() {
-  return "Hello World";
+const desafio = "helloworld";
+function Opa() {
+  return (
+    <div>
+      <b> {desafio.split("").join("///")}</b> <TextDate />
+      <h1> {desafio.split("").join("===")}</h1>
+      <h2> {desafio.split("").join("()")}</h2> <TextDate />
+      <h3> {desafio.split("").join("{}")}</h3>
+      <h4> {desafio.toUpperCase()}</h4>
+    </div>
+  );
 }
-
-function Text2() {
-  return "Hello World".toLowerCase();
-}
-
-function Text3() {
-  return "Hello World".toUpperCase();
-}
-
-function Text4() {
-  return "Hello World".split("").reverse().join("");
-}
-
-function Text5() {
-  return "Hello World".split('').sort(function(){return 0.3-Math.random()}).join('');
-}
-
-function Text6() {
+function One() {
   return "Hello World".split("").join(" ");
 }
 
-function Text7() {
+function Two() {
   return "Hello World".split("").reverse().join();
 }
 
-function Text8() {
+function Three() {
   return "Hello World".split("").join();
 }
 
-function Welcome() {
-  return <First name="Hello" lastname="World" />;
+function Four() {
+  return <UsandoProps name="Hello" lastname="World" />;
 }
 
-function First(props) {
+function UsandoProps(props) {
   return (
     <h1>
       {props.name} {props.lastname}
@@ -44,12 +34,11 @@ function First(props) {
   );
 }
 
-function Cod(){
-
-  const decoded = (Buffer.from("Hello World").toString('base64'));
-const encoded = (Buffer.from("SGVsbG8gV29ybGQ=", 'base64').toString('utf-8'))
-  return encoded + "  CODIFICADO PARA BASE64: " + decoded ;
-  }
+function Cod() {
+  const decoded = Buffer.from("Hello World").toString("base64");
+  const encoded = Buffer.from("SGVsbG8gV29ybGQ=", "base64").toString("utf-8");
+  return encoded + "  CODIFICADO PARA BASE64: " + decoded;
+}
 
 function TextDate() {
   var today = new Date();
@@ -64,19 +53,16 @@ function TextDate() {
     dd + "/" + mm + "/" + yyyy + "    " + hora + ":" + minuto + ":" + segundo;
   return today;
 }
-function App(){
+function App() {
   return (
     <div>
-    <Text1 /> <TextDate/> <br/>
-    <Text2 /> <TextDate/> <br/>
-    <Text3 /> <TextDate/> <br/>
-    <Text4 /> <TextDate/> <br/>
-    <Text5 /> <TextDate/> <br/>
-    <Text6 /> <TextDate/> <br/>
-    <Text7 /> <TextDate/> <br/>
-    <Text8 /> <TextDate/> <br/>
-    <Welcome /> <TextDate/> <br/>
-    <Cod /> <br/> <br/> <TextDate />
+      <Opa />
+      <One /> <TextDate /> <br />
+      <Two /> <TextDate /> <br />
+      <Three /> <TextDate /> <br />
+      <Four /> <TextDate /> <br />
+      <UsandoProps /> <TextDate /> <br />
+      <b> <Cod /> </b><br /> <br /> <TextDate />
     </div>
   );
 }
